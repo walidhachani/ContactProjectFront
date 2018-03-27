@@ -25,6 +25,8 @@
       <td>{{c.prenom}}</td>
       <td>{{c.email}}</td>
       <td>{{c.tel}}</td>
+      <td><a (click)="onEditContact(c.id)" class="clickable">Edit</a></td>
+      <td><a  (click)="onDeletContact(c)" class="clickable"><p class="text-danger">Supprimer</p></a></td>
 
     </tr>
 

@@ -10,12 +10,15 @@ import {HttpModule} from '@angular/http';
 import {ContactsService} from '../services/contacts.service';
 import {FormsModule} from '@angular/forms';
 import { NewContactComponent } from './new-contact/new-contact.component';
+import { NouveauContactComponent } from './nouveau-contact/nouveau-contact.component';
+import { EditContactComponent } from './edit-contact/edit-contact.component';
 
 
 const appRoutes:Routes=[
   {path:'about' , component:AboutComponent} ,
   {path:'contact' , component:ContactsComponent},
   {path:'newContact' , component:NewContactComponent},
+  {path:'editContact/:id' , component:EditContactComponent},
   {path:'' , redirectTo:'/about' , pathMatch:'full'}
 ]
 
@@ -26,7 +29,9 @@ const appRoutes:Routes=[
     AppComponent,
     ContactsComponent,
     AboutComponent,
-    NewContactComponent
+    NewContactComponent,
+    NouveauContactComponent,
+    EditContactComponent
   ],
   imports: [
     BrowserModule,RouterModule.forRoot(appRoutes),HttpModule , FormsModule
